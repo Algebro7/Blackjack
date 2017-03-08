@@ -1,6 +1,5 @@
 #include "Deck.h"
 #include <iostream>
-#include <sstream>
 
 void Deck::init() {
     std::string suits = "CDHS";
@@ -21,6 +20,7 @@ void Deck::shuffle(std::default_random_engine engine) {
     std::shuffle(std::begin(cards), std::end(cards), engine);
 }
 
+// 2-10 Card
 void Deck::add_card(int name, char suit, int value) {
     Card card = Card();
     card.name.int_name = name;
@@ -31,6 +31,7 @@ void Deck::add_card(int name, char suit, int value) {
     cards.push_back(card);
 }
 
+// Face card
 void Deck::add_card(char name, char suit, int value) {
     Card card = Card();
     card.name.char_name = name;

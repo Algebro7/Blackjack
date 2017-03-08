@@ -2,6 +2,7 @@
 #define BLACKJACK_DECK_H
 
 #include <algorithm>
+#include <random>
 #include <vector>
 
 #include "Card.h"
